@@ -80,5 +80,17 @@ question5 = input("""You're walking down the hall and you find a wand and some t
 A. Tell the head-master
 B. Steal it for yourself
 C. Walk away and mind your business
-D. Find the owner and return it to them""").lower()
-
+D. Find the owner and return it to them
+""").lower()
+if question5 == "a":
+    gryf += 1
+elif question5 == "b":
+    slyth += 1
+elif question5 == "c":
+    raven += 1
+elif question5 == "d":
+    huffle += 1
+else:
+    print("try again")
+    
+question6 = input("""""")
