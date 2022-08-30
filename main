@@ -9,7 +9,8 @@ gryf = 0
 slyth = 0
 raven = 0
 huffle = 0
-print("Welcome to the House Test! Good luck...")
+print("Welcome to the Hogwarts House Test! Here you will be tested to see which house you will join. Please stay calm, it's only the most important test of your life. Good luck.")
+print("")
 print("---------------------------------------------")
 print("")
 while True:
@@ -83,7 +84,7 @@ D. Mind your own business
     else:
         print("try again")
 print("")
-print("Yeah i gotta tell your mom about that one. Onto question 4.")
+print("Yeah, I definitely gotta tell your mom about that one. Onto question 4.")
 print("")
 while True:
     question4 = input("""If you see someone you hate in danger do you
@@ -118,12 +119,26 @@ D. Find the owner and return it to them
 """).lower()
     if question5 == "a":
         gryf += 1
+        break
     elif question5 == "b":
         slyth += 1
+        break
     elif question5 == "c":
         raven += 1
+        break
     elif question5 == "d":
         huffle += 1
+        break
     else:
         print("try again")
-    
+print("")
+print("Final results are:")
+print(f"gryf = {gryf} \nslyth = {slyth} \nraven = {raven} \nhuffle = {huffle}")
+if gryf > slyth and gryf > raven and gryf > huffle:
+    print(f"You're a Gryffindor! You are brave, have nerve and are chivalrous. You had a total of {gryf} points just for them! How courageous.")
+elif slyth > gryf and slyth > raven and slyth > huffle:
+    print(f"You're a Slytherin... Can't say I'm suprised. You are clever, determined and ambitious. Make sure to use those traits for good. You finished with a total of {slyth} points for their house. Now get away from me.")
+elif huffle > slyth and huffle > raven and huffle > gryf:
+    print(f"You're a Hufflepuff! Basically the less cool version of Gryffindor. You have a strong sense of justice, loyalty, patience and a knack for hard work. You got {huffle} points for their house!")
+else:
+    print("You're a Ravenclaw! You're intelligent, learning and witty. Welcome!")
