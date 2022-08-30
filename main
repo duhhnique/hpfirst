@@ -1,6 +1,10 @@
 # asking questions
 # associating answers with houses
 # determine what house you are at end and let you know
+from re import A
+from xml.etree.ElementTree import TreeBuilder
+
+
 gryf = 0
 slyth = 0
 raven = 0
@@ -8,89 +12,118 @@ huffle = 0
 print("Welcome to the House Test! Good luck...")
 print("---------------------------------------------")
 print("")
-question1 = input("""If you see a kid sneaking out after dark, would you 
-A. give them a hi-five and sneak out with them 
-B. tell a professor
-C. tell a head-master or head-mistress
-D. invite other people from the common room to watch
-""").lower()
-if question1 == "a":
-    slyth += 1
-elif question1 == "b":
-    gryf += 1
-elif question1 == "c":
-    huffle += 1
-elif question1 == "d":
-    raven += 1
-else:
-    print("try again")
-
-question2 = input("""Which one of these describes you
+while True:
+    question1 = input("""If you see a kid sneaking out after dark, would you 
+    A. give them a hi-five and sneak out with them 
+    B. tell a professor
+    C. tell a head-master or head-mistress
+    D. invite other people from the common room to watch
+    """).lower()
+    if question1 == "a":
+        slyth += 1
+        break
+    elif question1 == "b":
+        gryf += 1
+        break
+    elif question1 == "c":
+        huffle += 1
+        break
+    elif question1 == "d":
+        raven += 1
+        break
+    else:
+        print("Whoops, wrong letter! Try again.")
+print("")
+print("Hmmm... Interesting :) Next question!")
+print("")
+while True:
+    question2 = input("""Which one of these describes you
 A. Rude and full of your self
 B. A know-it-all and nice
 C. Brave and courageous 
 D. Kind and loyal
 """).lower()
-if question2 == "a":
-    slyth += 1
-elif question2 == "b":
-    raven += 1
-elif question2 == "c":
-    gryf += 1
-elif question2 == "d":
-    huffle += 1
-else:
-    print("try again")
+    if question2 == "a":
+        slyth += 1
+        break
+    elif question2 == "b":
+        raven += 1
+        break
+    elif question2 == "c":
+        gryf += 1
+        break
+    elif question2 == "d":
+        huffle += 1
+        break
 
-question3 = input("""You see two people dueling, you
+    else:
+        print("Whoops, wrong letter! Try again.")
+print("")
+print("Wow... I didn't expect that. Sheesh. Alright next question...")
+print("")
+while True:
+    question3 = input("""You see two people dueling, you
 A. Tell the head-master
 B. Watch and laugh
 C. Break up the duel with another spell
 D. Mind your own business
 """).lower()
-if question3 == "a":
-    gryf += 1
-elif question3 == "b":
-    slyth += 1
-elif question3 == "c":
-    raven += 1
-elif question3 == "d":
-    huffle += 1
-else:
-    print("try again")
-
-question4 = input("""If you see someone you hate in danger do you
+    if question3 == "a":
+        gryf += 1
+        break
+    elif question3 == "b":
+        slyth += 1
+        break
+    elif question3 == "c":
+        raven += 1
+        break
+    elif question3 == "d":
+        huffle += 1
+        break
+    else:
+        print("try again")
+print("")
+print("Yeah i gotta tell your mom about that one. Onto question 4.")
+print("")
+while True:
+    question4 = input("""If you see someone you hate in danger do you
 A. help them
 B. laugh 
 C. walk away
 D. tell a professor on them 
 """).lower()
-if question4 == "a":
-    gryf += 2
-elif question4 == "b":
-    slyth += 2
-elif question4 == "c":
-    raven += 2
-elif question4 == "d":
-    huffle += 2
-else:
-    print("try again")
-
-question5 = input("""You're walking down the hall and you find a wand and some textbooks, do you 
+    if question4 == "a":
+        gryf += 2
+        break
+    elif question4 == "b":
+        slyth += 2
+        break
+    elif question4 == "c":
+        raven += 2
+        break
+    elif question4 == "d":
+        huffle += 2
+        break
+    else:
+        print("try again")
+print("")
+print("Shocking!!")
+print("")
+while True:
+    question5 = input("""You're walking down the hall and you find a wand and some textbooks, do you 
 A. Tell the head-master
 B. Steal it for yourself
 C. Walk away and mind your business
 D. Find the owner and return it to them
 """).lower()
-if question5 == "a":
-    gryf += 1
-elif question5 == "b":
-    slyth += 1
-elif question5 == "c":
-    raven += 1
-elif question5 == "d":
-    huffle += 1
-else:
-    print("try again")
+    if question5 == "a":
+        gryf += 1
+    elif question5 == "b":
+        slyth += 1
+    elif question5 == "c":
+        raven += 1
+    elif question5 == "d":
+        huffle += 1
+    else:
+        print("try again")
     
-question6 = input("""""")
